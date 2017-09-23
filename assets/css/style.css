@@ -34,6 +34,7 @@ html {
 #name {
     width: 100px;
     height: 60px;
+    align-content: center;
     background-color: black;
     background-image: -webkit-linear-gradient(grey, grey, black);
     background-image: -moz-linear-gradient(grey, grey, black);
@@ -46,7 +47,7 @@ html {
 }
 #nav {
     position: fixed;
-    left: 445px;
+    left: 388px;
     margin-left: 50px;
     overflow: scroll;
     padding: 20px;
@@ -64,13 +65,13 @@ body {
     background-color: #ffffff;
     margin-left: 13.33px;
     margin-top: 45px;
-    margin-bottom: -34px;
+    margin-bottom: -26px;
     padding: 20px;
     border: 1px solid #000000;
-    display: block +13.33px;
 }
 .h1 {
     color: #000000;
+    margin: 0px;
 }
 .list {
     -moz-column-fill: auto; /* Firefox */
@@ -103,31 +104,91 @@ body {
 }
 .social {
     position: relative;
+    float: left;
     top: 115px;
     left: 0px;
-    overflow: auto;
     width: 270px;
     float: left;
     background-color: #ffffff;
     color: #000000;
     margin-left: 13.33px;
-    margin-bottom: 71px;
+    margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #000000;
 }
-.footer, .content::after {
-    height: -43.33px;
-}
 .footer {
-    clear: both;
     position: fixed;
     left: 20px;
     bottom: 0;
     width: 100%;
-    margin-top: 13.33px;
+    margin-top: 100px;
     border-top: 1px solid grey;
     border-left: 1px solid grey;
     background-color: rgba(102, 102, 102, 0.48);
     color: white;
     padding-top: 0px;
 }
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: #000000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: grey;
+}
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.holder {
+    width: 200px;
+    margin: 0px;
+  }
+  .special-offer {
+      position: relative;
+  }
+  .special-offer::before,
+  .special-offer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-color: transparent;
+      border-style: solid;
+  }
+  .special-offer::before {
+      border-width: 70px;
+      border-right-color: #D33D3D;
+      border-top-color: #D33D3D;
+      z-index: 3;
+  }
+  .special-offer::after {
+      content: 'Check it!';
+      top: 30px;
+      right: -5px;
+      z-index: 4;
+      text-transform: uppercase;
+      color: #fff;
+      white-space: pre;
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 20px;
+      text-align: center;
+      -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  }
